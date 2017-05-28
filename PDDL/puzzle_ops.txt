@@ -1,0 +1,42 @@
+(operator
+move-left
+(params
+(<t> Tile) (<from_loc> Location) (<to_loc> Location))
+(preconds
+(empty <to_loc>)(tileAt <t> <from_loc>)(validLocation <from_loc>)(validLocation <to_loc>) (incBy1 <to_loc> <from_loc>))
+(effects
+(del empty <to_loc>)(del tileAt <t> <from_loc>)(empty <from_loc>)(tileAt <t> <to_loc>))
+)
+
+(operator
+move-right
+(params
+(<t> Tile)(<from_loc> Location)(<to_loc> Location))
+(preconds
+(empty <to_loc>)(tileAt <t> <from_loc>)(validLocation <from_loc>)(validLocation <to_loc>)(decBy1 <to_loc> <from_loc>))
+(effects
+(del empty <to_loc>)(del tileAt <t> <from_loc>)(empty <from_loc>)(tileAt <t> <to_loc>))
+)
+
+(operator
+move-up
+(params
+(<t> Tile)(<from_loc> Location)(<to_loc> Location))
+(preconds
+(empty <to_loc>)(tileAt <t> <from_loc>)(validLocation <from_loc>)(validLocation <to_loc>)(incBy3 <to_loc> <from_loc>))
+(effects
+(del empty <to_loc>)(del tileAt <t> <from_loc>)(empty <from_loc>)(tileAt <t> <to_loc>))
+)
+
+
+(operator
+move-down
+(params
+(<t> Tile)(<from_loc> Location)(<to_loc> Location))
+(preconds
+(empty <to_loc>)(tileAt <t> <from_loc>)(validLocation <from_loc>)(validLocation <to_loc>)(decBy3 <to_loc> <from_loc>))
+(effects
+(del empty <to_loc>)(del tileAt <t> <from_loc>)(empty <from_loc>)(tileAt <t> <to_loc>))
+)
+
+

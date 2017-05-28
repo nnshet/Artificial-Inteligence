@@ -1,0 +1,6 @@
+evaluation
+
+1) This function calculates heuristic value for each node. Depedning on these values, the alogrithm decides which move to make in order to maximze its output/ outcome by the node with the maximum heuristic value.
+2) This function covers all the possibilities that is vertical check, horizontal check, and diagonal check.
+3) If the function finds 4 adjacent 1's or 2's, it assigns the maximum heuristic value in this case it is 1000. Accordingly, lesser values like 200 and 400 are assigned if it finds 2 or 3 adjacent 1's or 2's.
+ 
